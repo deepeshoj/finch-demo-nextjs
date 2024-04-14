@@ -19,28 +19,22 @@ Create a `.env.local` file under your root project directory (or copy our exampl
 Define the necessary Finch configuration values as follows:
 
 ```
-# The base url of your application
 BASE_URL=http://localhost:3000
 
-# The base url of Finch APIs
 FINCH_API_URL=https://api.tryfinch.com
-FINCH_SANDBOX_URL=https://sandbox.tryfinch.com/api
+FINCH_SANDBOX_URL=https://api.tryfinch.com
 
-# DO NOT CHANGE - Finch Client Id that allows you to enter any provider credentials during demo
-NEXT_PUBLIC_FINCH_DEMO_CLIENT_ID=5dc0e9dc-c411-4e4e-a749-0e35aac43080
-FINCH_DEMO_CLIENT_ID=5dc0e9dc-c411-4e4e-a749-0e35aac43080
-
-# Your Finch Redirect Uri for client-side access
+FINCH_CLIENT_ID=
+FINCH_CLIENT_SECRET=
 NEXT_PUBLIC_FINCH_REDIRECT_URI=http://localhost:3000/api/finch/callback
 
-# Your Finch application Client ID for client-side access
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+NEXT_PUBLIC_FINCH_API_URL=https://api.tryfinch.com
+NEXT_PUBLIC_FINCH_SANDBOX_URL=https://api.tryfinch.com
+
 NEXT_PUBLIC_FINCH_CLIENT_ID=
-
-# Your Finch application Client ID for server-side access
-FINCH_CLIENT_ID=
-
-# Your Finch application Client Secret for server-side access
-FINCH_CLIENT_SECRET=
+NEXT_PUBLIC_FINCH_CLIENT_SECRET=
 ```
 
 ### Start Local Application
@@ -54,10 +48,6 @@ FINCH_CLIENT_SECRET=
 1. Create a new connection by either selecting `Redirect Flow` or `Embed Flow`. Or if you want to skip [Finch Connect](https://developer.tryfinch.com/docs/reference/4a41b0589896f-overview), you can create a `Gusto Sandbox` to start viewing data.
 
 You can start editing the app by modifying `components/finch-connect.tsx` or `components/navbar.tsx` or `pages/api/finch`. The pages auto-update as you edit the files.
-
-You can download the Finch API data as a CSV file by selecting the download icon next to each section. View the code to convert JSON to CSV in `/pages/api/finch/download`.
-
-Finch Data Types can be found in `types/finch.d.ts`.
 
 ### Notes
 
